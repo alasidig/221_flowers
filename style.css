@@ -1,0 +1,103 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+:root{
+    --primary-color:#0D6EFD;
+    --info-color:#0dcaf0;
+    --light-gray: rgba(0, 0, 0, 0.125);
+}
+*,::before{
+    box-sizing: border-box;
+}
+footer{
+    background-color: var(--primary-color);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+footer a:visited, footer a:link{
+    color: #fff;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+}
+.display-2{
+    font-size: 70px;
+}
+.row{
+    display: grid;
+    gap: 20px;
+    align-items: start;
+    margin-block-end: 1rem;
+}
+.col-3{
+    grid-template-columns: repeat(3,1fr);
+}
+.col-2{
+    grid-template-columns: repeat(2,1fr);
+}
+.card{
+    border: 1px solid var(--light-gray);
+    border-radius: .25rem;
+}
+.card-image{
+    max-width: 100%;
+    width: 100%;
+    border-radius:  .25rem  .25rem 0 0 ;
+}
+.card-body{
+    padding: .5rem;
+}
+.btn{
+    border-color: transparent;
+    padding: .25rem 0.75rem;
+    border-radius: .25rem;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+.btn-primary{
+    background-color:var(--primary-color);
+    color: white;
+}
+.bt-outline-info{
+    background-color: white;
+    color: var(--info-color);
+    border: 1px solid var(--info-color);
+}
+
+.bt-outline-info:hover{
+    background-color: var(--info-color);
+    color: white;
+}
+.mt-3{
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 1rem;
+}
+.card-footer{
+    display: flex;
+    padding: .5rem 1rem;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid var(--light-gray);
+    justify-content: space-between;
+}
+.text-danger{
+    color: red;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    overflow: visible;
+}
+.btn-outline-primary{
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-outline-primary:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+.jse{
+    margin-inline-start: auto;
+}

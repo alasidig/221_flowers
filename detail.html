@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Flowers Shop</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -29,39 +32,44 @@
         </nav>
     </header>
     <main>
-        <article>
-            <h3>AZALEA</h3>
-            <p>Price: 15.99</p>
-            <img src="https://services.hanselandpetal.com/photos/california_snow.jpg" alt="flower">
-            <a href="detail.html">More details</a>
-            <p>instructions: Choose the brightest windows in your house for your orchids, place on an humidity tray and spray regularly.
-            </p>
-        </article>
-        
-<button>See Comments</button>
+        <div class="row col-3">
+            <article class="card">
+                <img class="card-image" src="https://services.hanselandpetal.com/photos/california_snow.jpg"
+                    alt="flower">
+                <div class="card-body">
+                    <h3>AZALEA</h3>
+                    <p>Price: 15.99</p>
+                    <p> Choose the brightest windows in your house for your orchids, place on an humidity tray and spray
+                        regularly.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <i class="bi bi-heart text-danger"></i>
+                    <button class="btn btn-primary">See Comments</button>
+                </div>
+            </article>
+        </div>
 
 
+        <h3>Users Comments</h3>
 
 
+        <div class="row col-2">
+            <form action="">
+                <div class="mt-3"><input class="form-control" type="text" name="name" id="name" placeholder="your name">
+                </div>
+                <div class="mt-3"><textarea class="form-control" name="comment" id="comment" cols="30" rows="10"
+                        placeholder="Type your comment"></textarea></div>
+                <div class="mt-3"><button type="submit" class="btn btn-outline-primary jse">Add A Comment</button></div>
+            </form>
 
-
-<h3>Users Comments</h3>
-
-
-
-
-<form action="">
-    <input type="text" name="name" id="name" placeholder="your name">
-    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Type your comment"></textarea>
-    <p><button type="submit">Add A Comment</button></p>
-</form>
-
-
-
-
-
-<h4>Anonymous</h4>
-<p>Smells good and looks nice</p>
+            <article class="card">
+                <div class="card-body">
+                    <h4>Anonymous</h4>
+                    <p>Smells good and looks nice</p>
+                </div>
+            </article>
+        </div>
 
 
     </main>
@@ -99,9 +107,9 @@
         </ul>
 
         <ul>
-            <li>
-                We Accept
-            </li>
+
+            We Accept
+
             <li>
                 VISA
             </li>
@@ -114,4 +122,5 @@
         </ul>
     </footer>
 </body>
+
 </html>
