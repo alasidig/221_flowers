@@ -10,8 +10,6 @@
 footer{
     background-color: var(--primary-color);
     color: white;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
 }
 footer a:visited, footer a:link{
     color: #fff;
@@ -22,11 +20,15 @@ body{
 .display-2{
     font-size: 70px;
 }
+.container{
+    max-width: 960px;
+    margin-inline: auto;
+}
 .row{
     display: grid;
     gap: 20px;
     align-items: start;
-    margin-block-end: 1rem;
+    margin-block-end: 1rem;    
 }
 .col-3{
     grid-template-columns: repeat(3,1fr);
@@ -100,4 +102,19 @@ body{
 }
 .jse{
     margin-inline-start: auto;
+}
+@media (max-width:786px) {
+    .col-3{
+        grid-template-columns: 1fr 1fr;
+    }
+    .col-2{
+        grid-template-columns: 1fr;
+    }
+    
+}
+@media (max-width:600px) {
+    .col-3{
+        grid-template-columns: 1fr;
+    }
+    
 }
