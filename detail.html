@@ -59,32 +59,18 @@
                         </p>
                     </div>
                     <div class="card-footer d-flex justify-content-between">
-                        <i class="bi bi-heart text-danger"></i>
-                        <button class="btn btn-primary">See Comments</button>
+                        <i class="bi bi-heart text-danger" onclick="likeFlower(this)"></i>
+                        <button id="seeComBtn" class="btn btn-primary">See Comments</button>
                     </div>
                 </article>
             </div>
         </div>
 
 
-        <h3>Users Comments</h3>
+        
+        
+        <div class="row align-items-baseline mb-3 g-3" id="commentsRow">
 
-
-        <div class="row align-items-baseline mb-3">
-            <form action="" class=" col-lg-6">
-                <div class="mt-3"><input class="form-control" type="text" name="name" id="name" placeholder="your name">
-                </div>
-                <div class="mt-3"><textarea class="form-control" name="comment" id="comment" cols="30" rows="10"
-                        placeholder="Type your comment"></textarea></div>
-                <div class="mt-3"><button type="submit" class="btn btn-outline-primary jse">Add A Comment</button></div>
-            </form>
-
-            <article class="card col-lg-6">
-                <div class="card-body">
-                    <h4>Anonymous</h4>
-                    <p>Smells good and looks nice</p>
-                </div>
-            </article>
         </div>
 
 
@@ -139,6 +125,7 @@
             </div>
         </div>
     </footer>
+    <script src="frontendJS.js"></script>
 </body>
 
 </html>
