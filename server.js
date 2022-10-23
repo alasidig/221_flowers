@@ -1,7 +1,6 @@
-const http = require('http');
-http.createServer(function (request, response) {
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.end('Welcome to the Flowers Shop');
-}).listen(8081);
+const express = require('express')
+const app = express()
+const port = 3000
 
-console.log('Server running at http://127.0.0.1:8081/');
+app.get('/', (req, res) => res.send('<h2>Welcome to the Flowers Shop Express server</h2>'))
+app.listen(port, () => console.log(`Example app listening on port http://127.0.0.1:${port}`))

@@ -1,0 +1,27 @@
+{
+  "name": "flowers_lectures_221",
+  "version": "1.0.0",
+  "description": "flowers shop tutorials",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "serve_dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alasidig/221_flowers.git"
+  },
+  "author": "Dr. Alaaddin Saour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alasidig/221_flowers/issues"
+  },
+  "homepage": "https://github.com/alasidig/221_flowers#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
