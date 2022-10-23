@@ -1,2 +1,7 @@
-// run the command node server.js to see the output.
-console.log("Hello node");
+const http = require('http');
+http.createServer(function (request, response) {
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+  response.end('Welcome to the Flowers Shop');
+}).listen(8081);
+
+console.log('Server running at http://127.0.0.1:8081/');
