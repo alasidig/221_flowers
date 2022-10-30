@@ -1,8 +1,12 @@
 const express = require('express')
+const nunjucks = require('nunjucks');
 const app = express()
 const port = 3000
 app.use(express.static('public'))// prebuilt middleware
-app.get('/', (req, res) => res.send('<h2>Welcome to the Flowers Shop Express server</h2>'))
+nunjucks.configure( 'views', { express: app} ); //setup nunjucks template engin to find the templates in 'views' folder
+
+app.get('/', (req, res) => res.render('index.njk'))
+app.get('/detail', (req, res) => res.render('detail.njk'))
 
 //custom middleware
 app.use(function (req, res, next) {
