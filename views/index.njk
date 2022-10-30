@@ -2,15 +2,18 @@
 {% block content %}
     <h2 class="display-2">All Flowers</h2>
     <div class="row mb-3">
+{% for flower in flowers %}
+
         <div class="col-lg-4 col-md-6">
             <article class="card">
-                <img class="card-image" src="https://services.hanselandpetal.com/photos/california_snow.jpg" alt="flower">
+                <img class="card-image" src="https://services.hanselandpetal.com/photos/{{flower.photo}}" alt="flower">
                 <div class="card-body">
-                    <h3>AZALEA</h3>
-                    <p>Price: 15.99</p>
-                    <a class="btn btn-outline-info" href="detail.html">More details</a>
+                    <h3>{{flower.name}}</h3>
+                    <p>Price: {{flower.price}}</p>
+                    <a class="btn btn-outline-info" href="/detail/">More details</a>
                 </div>
             </article>
         </div>
+{% endfor %}
     </div>
 {% endblock  %}
