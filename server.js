@@ -7,7 +7,13 @@ app.use(express.static('public'))// prebuilt middleware
 nunjucks.configure( 'views', { express: app} ); //setup nunjucks template engin to find the templates in 'views' folder
 
 app.get('/', (req, res) => res.render('index.njk',{flowers:flowerModel.getFlowers(),IMAGES_URL:flowerModel.IMAGES_URL})) //pass the data to the template
-app.get('/detail', (req, res) => res.render('detail.njk'))
+app.get('/detail/:flowerId', (req, res) => 
+res.render('detail.njk',
+{
+    flower:flowerModel.getFlowerById(req.params.flowerId),
+    IMAGES_URL:flowerModel.IMAGES_URL
+}
+    ))
 
 //custom middleware
 app.use(function (req, res, next) {

@@ -4,13 +4,12 @@
         <div class="row mb-3">
             <div class="col-md-6 col-lg-4">
                 <article class="card">
-                    <img class="card-img-top" src="https://services.hanselandpetal.com/photos/california_snow.jpg"
+                    <img class="card-img-top" src="{{ IMAGES_URL }}/{{ flower.photo }}"
                         alt="flower">
                     <div class="card-body">
-                        <h3>AZALEA</h3>
-                        <p>Price: 15.99</p>
-                        <p> Choose the brightest windows in your house for your orchids, place on an humidity tray and spray
-                            regularly.
+                        <h3>{{ flower.name }}</h3>
+                        <p>Price: {{ flower.price }}</p>
+                        <p>Instructions: {{flower.instructions}}
                         </p>
                     </div>
                     <div class="card-footer d-flex justify-content-between">

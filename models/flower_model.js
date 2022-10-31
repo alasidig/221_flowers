@@ -66,9 +66,13 @@ const flowersList = [//local variable not part of the export
 ];
 
 const getFlowers = ()=>flowersList
+function getFlowerById(id) { 
+    return flowersList.find((flower)=>flower.productId == id)
+}
 const IMAGES_URL = "https://services.hanselandpetal.com/photos"
 //List of the module interface
 module.exports={
 getFlowers,
+getFlowerById,
 IMAGES_URL,
 }
