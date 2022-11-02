@@ -2,6 +2,7 @@
 {% block content %}
 
         <div class="row mb-3">
+            {% set iconClass = "bi-heart-fill" if likedFlower else "bi-heart" %}
             <div class="col-md-6 col-lg-4">
                 <article class="card">
                     <img class="card-img-top" src="{{ IMAGES_URL }}/{{ flower.photo }}"
@@ -13,7 +14,10 @@
                         </p>
                     </div>
                     <div class="card-footer d-flex justify-content-between">
-                        <i class="bi bi-heart text-danger" onclick="likeFlower(this)"></i>
+                         <form action="/detail/{{ flower.productId }}/like" method="post">
+                        <button type="submit" class="btn">
+                            <i class="bi {{ iconClass}} text-danger"></i>
+                        </button>
                         <button id="seeComBtn" class="btn btn-primary">See Comments</button>
                     </div>
                 </article>
